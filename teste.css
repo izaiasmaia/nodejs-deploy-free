@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    height: 450px; /* Altura fixa para o container */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    position: absolute; /* Muda a posição para ser absoluta */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    transition: transform 0.5s ease;
+}
+
+#register-container {
+    transform: translateX(100%); /* Move o formulário de registro para fora da tela inicialmente */
+}
+
+.hide {
+    display: none; /* Oculta completamente o formulário de login */
+}
+
+h1 {
+    text-align: center;
+    color: #e63946; /* Vermelho */
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #457b9d; /* Azul */
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1d3557; /* Azul mais escuro */
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #e63946; /* Vermelho */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teste.css">
+    <title>Tela de Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="login-container">
+            <form>
+                <h1>Login</h1>
+                <div class="input-group">
+                    <label for="username">Nome de usuário:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Entrar</button>
+                <p>Não tem uma conta? <a href="#" id="toggle">Cadastre-se</a></p>
+            </form>
+        </div>
+        
+        <div class="form-container" id="register-container">
+            <form>
+                <h1>Cadastro</h1>
+                <div class="input-group">
+                    <label for="new-username">Nome de usuário:</label>
+                    <input type="text" id="new-username" required>
+                </div>
+                <div class="input-group">
+                    <label for="new-password">Senha:</label>
+                    <input type="password" id="new-password" required>
+                </div>
+                <button type="submit">Cadastrar</button>
+                <p>Já tem uma conta? <a href="#" id="toggle-back">Login</a></p>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        const loginContainer = document.getElementById('login-container');
+        const registerContainer = document.getElementById('register-container');
+        const toggleButton = document.getElementById('toggle');
+        const toggleBackButton = document.getElementById('toggle-back');
+
+        toggleButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginContainer.classList.add('hide'); // Oculta o login
+            registerContainer.classList.remove('hide'); // Mostra o cadastro
+            registerContainer.style.transform = 'translateX(0)'; // Garante que o cadastro apareça na posição correta
+        });
+
+        toggleBackButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            registerContainer.style.transform = 'translateX(100%)'; // Move o cadastro para fora da tela
+            loginContainer.classList.remove('hide'); // Mostra o login
+        });
+    </script>
+</body>
+</html>
