@@ -45,7 +45,7 @@ class Categoria{
     static async selecionaCategorias() {
         try {
 
-            const pSql = 'select * from tbl_categoria;';
+            const pSql = 'SELECT * FROM TBL_CATEGORIA;';
             const pValues = null;
             // const result = await sqlExecute(conn, ...[{ sql: pSql, values: null }]);
             return { pSql, pValues };
